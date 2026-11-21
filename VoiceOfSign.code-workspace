@@ -1,0 +1,11 @@
+{
+  "folders": [
+    { "name": "VoiceOfSign (root)", "path": "." },
+    { "name": "firmware (PlatformIO)", "path": "firmware" }
+  ],
+  "settings": {
+    "files.exclude": {
+      "firmware": true
+    }
+  }
+}

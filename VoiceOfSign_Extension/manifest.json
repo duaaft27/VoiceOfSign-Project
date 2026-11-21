@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "صَوْت الإِشَارَة - Voice of Sign",
+  "version": "1.1",
+  "description": "قفاز ذكي لترجمة لغة الإشارة العربية وعرض الترجمة الفورية عبر المتصفح.",
+  "permissions": ["storage"],
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content_main.js"],
+      "run_at": "document_start",
+      "all_frames": true,
+      "world": "MAIN"
+    },
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ]
+}
